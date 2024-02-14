@@ -1,12 +1,15 @@
 import { TEAM_VALUES } from './constant/constant.js';
 
 const valueContainer = document.querySelector('.value-container');
-const valueIcon = valueContainer.querySelector('img');
-const valueTitle = valueContainer.querySelector('h2');
-const valueText = valueContainer.querySelector('p');
+const valueIcon = valueContainer.querySelector('.value-icon');
+const valueTitle = valueContainer.querySelector('.value-title');
+const valueText = valueContainer.querySelector('.value-text');
 
 const renderValue = (index) => {
-  valueIcon.src = TEAM_VALUES[index].ICON_URL;
+  if (valueIcon.classList.length === 3) {
+    valueIcon.classList.pop();
+  }
+  valueIcon.classList.add(TEAM_VALUES[index].ICON_URL);
   valueTitle.innerText = TEAM_VALUES[index].VALUE_NAME;
   valueText.innerText = TEAM_VALUES[index].VALUE_TEXT;
 };
