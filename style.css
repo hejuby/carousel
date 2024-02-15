@@ -17,18 +17,18 @@ h2 {
   line-height: 1.4;
 }
 
-/* .value-content-wrapper {
+.value-content-wrapper {
   display: flex;
   flex-basis: 0;
   margin: 0 150px;
-} */
+}
 
 /* .value-content-wrapper img {
   width: inherit;
   flex-grow: 4;
 } */
 
-/* .value-image-container {
+.value-image-container {
   background-image: url(/images/passion.jpg);
   background-size: contain;
   background-repeat: no-repeat;
@@ -36,17 +36,18 @@ h2 {
   flex-direction: column;
   align-items: center;
 }
-.value-image-container img {
+
+/* .value-image-container img {
   width: 100%;
 } */
 
 
-/* .value-image-container a {
+.value-image-container a {
   text-align: center;
   text-decoration: none;
   color: #313131;
   font-size: 12px;
-} */
+}
 
 .value-container {
   background-color: #f9fafb;
