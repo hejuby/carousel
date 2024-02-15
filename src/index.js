@@ -1,4 +1,4 @@
-import { TEAM_VALUES } from './constant/constant.js';
+import { TEAM_VALUES } from '../constant/constant.js';
 
 const valueIcon = document.getElementById('value-icon-container');
 const valueTitle = document.getElementById('value-title');
