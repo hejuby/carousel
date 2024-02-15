@@ -31,12 +31,11 @@ h2 {
 /* .value-image-container {
   background-image: url(/images/passion.jpg);
   background-size: contain;
-  background-repeat: no-repeat; */
-  /* display: flex;
+  background-repeat: no-repeat;
+  display: flex;
   flex-direction: column;
-  align-items: center; */
+  align-items: center;
 }
-/* 
 .value-image-container img {
   width: 100%;
 } */
@@ -92,5 +91,5 @@ button {
 }
 
 button:hover {
-  opacity: 1;;
+  opacity: 1;
 }
