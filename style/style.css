@@ -29,7 +29,7 @@ h2 {
 } */
 
 .value-image-container {
-  background-image: url(/images/passion.jpg);
+  background-image: url(./images/passion.jpg);
   background-size: contain;
   background-repeat: no-repeat;
   position: relative;
