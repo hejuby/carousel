@@ -13,27 +13,21 @@ const renderValue = (index) => {
   valueIcon.innerHTML = TEAM_VALUES[index].ICON_URL;
   valueTitle.innerText = TEAM_VALUES[index].VALUE_NAME;
   valueText.innerText = TEAM_VALUES[index].VALUE_TEXT;
-  if (index === 0) {
-    btnValuePrev.classList.add('hidden');
-  }
-  if (index === TEAM_VALUES.length-1) {
-    btnValueNext.classList.add('hidden');
-  }
-  if (index > 0 && index < TEAM_VALUES.length-1) {
-    btnValuePrev.classList.remove('hidden');
-    btnValueNext.classList.remove('hidden');
-  }
 };
 
 const pressValuePrev = () => {
-  console.log('prev pressed');
   valueIndex -= 1;
+  if (valueIndex < 0) {
+    valueIndex = TEAM_VALUES.length - 1;
+  }
   renderValue(valueIndex);
 };
 
 const pressValueNext = () => {
-  console.log('next pressed');
   valueIndex += 1;
+  if (valueIndex > TEAM_VALUES.length - 1) {
+    valueIndex = 0;
+  }
   renderValue(valueIndex);
 };
 
