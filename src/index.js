@@ -18,22 +18,25 @@ const renderValue = (index) => {
   valueImg.innerHTML = TEAM_VALUES[index].ATTRIBUTION_URL;
 };
 
-const pressValuePrev = () => {
-  valueIndex -= 1;
-  if (valueIndex < 0) {
-    valueIndex = TEAM_VALUES.length - 1;
-  }
+const pressButton = (e) => {
+  const isNext = e.target.parentElement.classList.contains('value-next');
+  changeIndex(isNext);
   renderValue(valueIndex);
-};
+}
 
-const pressValueNext = () => {
-  valueIndex += 1;
-  if (valueIndex > TEAM_VALUES.length - 1) {
-    valueIndex = 0;
+const changeIndex = (isNext) => {
+  if (isNext) {
+    valueIndex += 1;
+    if (valueIndex > TEAM_VALUES.length - 1) {
+      valueIndex = 0;
+    }
+  } else {
+    valueIndex -= 1;
+    if (valueIndex < 0) {
+      valueIndex = TEAM_VALUES.length - 1;
+    }
   }
-  renderValue(valueIndex);
-};
+}
 
-renderValue(valueIndex);
-btnValuePrev.addEventListener('click', pressValuePrev);
-btnValueNext.addEventListener('click', pressValueNext);
+btnValuePrev.addEventListener('click', pressButton);
+btnValueNext.addEventListener('click', pressButton);
