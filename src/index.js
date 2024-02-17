@@ -19,10 +19,11 @@ const renderValue = (index) => {
 };
 
 const pressButton = (e) => {
-  const isNext = e.target.parentElement.classList.contains('value-next');
+  console.log(e.target);
+  const isNext = e.target.classList.contains('value-next');
   changeIndex(isNext);
   renderValue(valueIndex);
-}
+};
 
 const changeIndex = (isNext) => {
   if (isNext) {
@@ -36,7 +37,7 @@ const changeIndex = (isNext) => {
       valueIndex = TEAM_VALUES.length - 1;
     }
   }
-}
+};
 
 btnValuePrev.addEventListener('click', pressButton);
 btnValueNext.addEventListener('click', pressButton);

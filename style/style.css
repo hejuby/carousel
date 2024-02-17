@@ -79,7 +79,9 @@ h2 {
 
 .value-button-container {
   margin: 30px;
-  text-align: center;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
 }
 
 button {
@@ -89,6 +91,12 @@ button {
   transition: .3s;
   opacity: .5;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+button i {
+  z-index: -1;
 }
 
 button:hover {
